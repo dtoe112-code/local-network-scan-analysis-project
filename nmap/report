@@ -1,0 +1,94 @@
+# Cybersecurity Lab Report  
+## Local Network Reconnaissance & Packet Analysis
+
+---
+
+## 1. Overview
+This lab demonstrates practical cybersecurity techniques using **Nmap** for network reconnaissance and **Wireshark** for packet‑level traffic analysis.  
+The goal was to identify active hosts, enumerate services, and analyze network communication patterns on a local subnet.
+
+---
+
+## 2. Environment
+- Windows 10 host
+- Local network: 10.0.0.0/24
+- Tools:
+  - Nmap 7.98
+  - Wireshark 4.x
+  - PowerShell
+
+---
+
+## 3. Steps Performed
+
+### 3.1 Identify Local IP Range
+Used `ipconfig` to determine the host’s IPv4 address and subnet mask.
+
+### 3.2 Perform Network Discovery Scan
+This identified all active hosts on the network.
+
+### 3.3 Perform Service/Version Scans
+nmap -sV 10.0.0.1
+nmap -sV 10.0.0.179
+These scans revealed open ports and running services.
+
+
+### 3.4 Capture Live Traffic with Wireshark
+Captured ICMP, mDNS, TCP, QUIC, and IPv6 traffic.
+
+### 3.5 Analyze Packets
+Reviewed:
+- Router advertisements
+- Multicast DNS queries
+- TCP handshake packets
+- Encrypted QUIC traffic
+- IPv6 neighbor discovery
+
+---
+
+## 4. Key Findings
+
+### 4.1 Active Devices
+Multiple devices were discovered:
+- Router (10.0.0.1)
+- Roku streaming device
+- Samsung device
+- IoT devices
+- Windows host (10.0.0.179)
+
+### 4.2 Router Services
+- DNS (dnsmasq 2.83)
+- HTTP/HTTPS admin interface
+
+### 4.3 Windows Host Services
+- MSRPC
+- NetBIOS
+- SMB
+- MySQL (unauthorized access)
+
+### 4.4 Packet Analysis Highlights
+- ICMP router advertisements broadcast to 224.0.0.1
+- mDNS traffic from Roku device
+- TCP SYN/ACK handshake from IPv6 addresses
+- QUIC encrypted traffic to external servers
+
+---
+
+## 5. Conclusion
+This project demonstrates foundational cybersecurity skills including:
+- Host discovery
+- Service enumeration
+- Packet capture and analysis
+- Understanding of network protocols
+- Documentation and reporting
+
+These techniques are essential for roles in SOC analysis, penetration testing, and network security.
+
+---
+
+## 6. Artifacts
+All scans, screenshots, and packet captures are included in the repository.
+
+Used `ipconfig` to determine the host’s IPv4 address and subnet mask.
+
+### 3.2 Perform Network Discovery Scan
