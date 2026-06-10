@@ -1,1 +1,20 @@
-Nmap discovery scan results will be added here
+PS C:\WINDOWS\system32> nmap -sn 10.0.0.0/24 -oN discover-scan.txt
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-06-10 16:01 -0400
+Nmap scan report for 10.0.0.1
+Host is up (0.018s latency).
+MAC Address: F8:D0:0E:D8:96:B7 (Unknown)
+Nmap scan report for 10.0.0.85
+Host is up (0.069s latency).
+MAC Address: 1C:98:C1:26:5A:00 (Cloud Network Technology Singapore PTE.)
+Nmap scan report for 10.0.0.185
+Host is up (0.099s latency).
+MAC Address: 50:06:F5:2C:5D:6F (Roku)
+Nmap scan report for 10.0.0.209
+Host is up (1.2s latency).
+MAC Address: B8:2C:A0:DB:97:37 (Resideo)
+Nmap scan report for 10.0.0.214
+Host is up (0.11s latency).
+MAC Address: 68:72:C3:BF:B6:DC (Samsung Electronics)
+Nmap scan report for 10.0.0.179
+Host is up.
+Nmap done: 256 IP addresses (6 hosts up) scanned in 7.40 seconds
